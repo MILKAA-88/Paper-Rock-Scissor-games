@@ -6,6 +6,14 @@ const paper = document.getElementById("paper");
 const rock = document.getElementById("rock");
 const scissors = document.getElementById("scissors");
 
-paper.addEventListener("click", () => console.log("papier"));
-rock.addEventListener("click", () => console.log("caillou"));
-scissors.addEventListener("click", () => console.log("ciseaux"));
+function runGame(userChoice) {
+  const computerChoice = choices[Math.floor(Math.random() * choices.length)]
+  
+  console.log(`M: ${userChoice} | C: ${computerChoice}`);
+}
+
+
+
+paper.addEventListener("click", () => runGame("papier"));
+rock.addEventListener("click", () => runGame("caillou"));
+scissors.addEventListener("click", () => runGame("ciseaux"));
